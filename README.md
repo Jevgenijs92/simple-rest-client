@@ -26,6 +26,9 @@ https://github.com/Jevgenijs92/simple-rest-service
 ### To start angular server run
 <code>ng serve</code>
 
+### You can now access server at
+http://localhost:4200
+
 
 
 
