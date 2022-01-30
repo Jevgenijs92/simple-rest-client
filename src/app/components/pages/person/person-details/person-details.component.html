@@ -1,0 +1,26 @@
+<div class="person-details">
+  <p-card header="Person Details">
+    <table class="person-details__table" *ngIf="person">
+      <tr>
+        <td>Personal ID:</td>
+        <td *ngIf="person.personalId">{{person.personalId}}</td>
+      </tr>
+      <tr>
+        <td>First name:</td>
+        <td *ngIf="person.firstName">{{person.firstName}}</td>
+      </tr>
+      <tr>
+        <td>Last name:</td>
+        <td *ngIf="person.lastName">{{person.lastName}}</td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td *ngIf="person.gender">{{person.gender}}</td>
+      </tr>
+      <tr>
+        <td>Date of birth:</td>
+        <td *ngIf="person.birthdate">{{person.birthdate | date:'dd.MM.yyyy'}}</td>
+      </tr>
+    </table>
+  </p-card>
+</div>

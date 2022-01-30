@@ -1,0 +1,19 @@
+.person-details__table {
+  border-collapse: collapse;
+  border: none;
+
+  td {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    min-width: 120px;
+    padding: 15px;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

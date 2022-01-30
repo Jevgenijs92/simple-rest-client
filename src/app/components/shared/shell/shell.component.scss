@@ -1,0 +1,17 @@
+.shell {
+  height: 100vh;
+  &__card {
+    @media screen and (min-width: 768px) {
+      &-wrapper {
+        width: 360px;
+        height: 333px;
+        background-color: var(--surface-a);
+        position: absolute;
+        left: calc(50% - 160px);
+        @media screen and (min-height: 550px) {
+          top: calc(50% - 275px);
+        }
+      }
+    }
+  }
+}
