@@ -7,11 +7,20 @@
             <div class="p-fluid pb-5">
               <label for="personalId">Personal ID</label>
               <input formControlName="personalId" type="text" id="personalId" class="mt-2" pInputText>
-              <small *ngIf="personForm['personalId'].invalid && isSubmitted" class="p-error">Personal ID is required</small>
+              <small *ngIf="personForm['personalId'].invalid && isSubmitted" class="p-error">
+                <span *ngIf="personForm['personalId'].errors && personForm['personalId'].errors['required']">
+                  Personal ID is required
+                </span>
+                <span *ngIf="personForm['personalId'].errors &&
+                      (personForm['personalId'].errors['minlength'] || personForm['personalId'].errors['maxlength'])">
+                  Personal ID should contain 14 symbols
+                </span>
+              </small>
             </div>
             <div class="p-fluid pb-5">
               <label for="birthdate">Birthdate</label>
-              <p-calendar styleClass="mt-2" formControlName="birthdate" id="birthdate" [showIcon]="true" dateFormat="dd.mm.yy"></p-calendar>
+              <p-calendar styleClass="mt-2" formControlName="birthdate" id="birthdate"
+                          [showIcon]="true" dateFormat="dd.mm.yy" [showOnFocus]="false"></p-calendar>
               <small *ngIf="personForm['birthdate'].invalid && isSubmitted" class="p-error">Birthdate is required</small>
             </div>
             <div class="p-fluid">

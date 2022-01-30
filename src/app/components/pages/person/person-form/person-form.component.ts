@@ -30,8 +30,8 @@ export class PersonFormComponent implements OnInit, OnDestroy {
 
   private _initPersonForm() {
     this.form = this.formBuilder.group({
-      personalId: ['25031982-35985', Validators.required],
-      birthdate: [new Date(1982, 2, 25), Validators.required]
+      personalId: ['', [Validators.required, Validators.minLength(14), Validators.maxLength(14)]],
+      birthdate: ['', Validators.required]
     })
   }
 

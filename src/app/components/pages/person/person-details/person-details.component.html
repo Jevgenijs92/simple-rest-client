@@ -22,5 +22,8 @@
         <td *ngIf="person.birthdate">{{person.birthdate | date:'dd.MM.yyyy'}}</td>
       </tr>
     </table>
+    <div class="button-back-wrapper">
+      <p-button label="Back" (onClick)="onBack()" icon="pi pi-angle-left" iconPos="left"></p-button>
+    </div>
   </p-card>
 </div>
